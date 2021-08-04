@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: black;
+}
+
+.logo {display: inline !important;}
+.navbar {background-color: rgb(20, 18, 18);}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 55px;
+}
+
+.navbar__container li {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+}
+
+.navbar__container li a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: block;
+}
+
+.navbar__container li span {color: green;}
+
+[href="#tours"] {color: green !important;}
+
+.allTours {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+.tourInfo {
+  margin: 1rem 1.5rem;
+}
+
+.tourInfo h1 {
+  color: green;
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+
+.tourInfo h3 {text-transform: capitalize; font-size: 1.2rem;}
+.tourInfo h5 {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+
+.tour {background-color: gray;}
+.tour img {
+  width: 100%;
+  display: block;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.tour img:hover {transform: scale(1.5);}
+
+.img {
+  position: relative;
+  overflow: hidden;
+}
+
+.close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1rem;
+  color: green;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.img:hover .close-btn {opacity: 1;}
+
+.info-icon {
+  color: green;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+  .tour {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .tour img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .infoText {
+    font-size: 1.4rem;
+    line-height: 33px;
+  }
+}
